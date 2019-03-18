@@ -1,11 +1,17 @@
+const path = require('path')
+const { promisify } = require('util')
 const csv = require('csv')
 const { readFile } = require('fs-extra')
-const { promisify } = require('util')
 
 const parse = promisify(csv.parse)
 const stringify = promisify(csv.stringify)
 
-async function transformStarlingCsv (file) {
+function buildTargetPath (fp) {
+  const { dir, name } = path.parse(fp)
+  return path.join(dir, `${name}.ynab.csv`)
+}
+
+async function transformCsv (file) {
   const csv = await readFile(file, { encoding: 'utf-8' })
   const parsed = await parse(csv, { columns: true })
   const records = parsed.map(transformRecord)
@@ -33,5 +39,6 @@ function transformRecord (input) {
 }
 
 module.exports = {
-  transformStarlingCsv
+  buildTargetPath,
+  transformCsv,
 }

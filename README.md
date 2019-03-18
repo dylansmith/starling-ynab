@@ -1,6 +1,6 @@
 # starling-ynab
 
-A small command-line utility to convert [Starling Bank](https://www.starlingbank.com/) CSV statements into [YNAB](https://www.youneedabudget.com/) format.
+A small command-line utility to convert [Starling Bank](https://www.starlingbank.com/) CSV statements into [YNAB](https://www.youneedabudget.com/)-compatible formats (CSV or QIF).
 
 Disclaimer: I personally use YNAB 4, and have not yet tested this with "New YNAB" as yet.
 
@@ -14,13 +14,34 @@ $ npm install -g starling-ynab
 
 1. Export statements via the Starling Bank app, choosing "CSV" as the output format.
 2. Choose "Export Statement" and save it somewhere accessible (e.b. Google Drive, Dropbox)
-3. Run the following to generate YNAB-compatible CSV files:
+
+### Coverting to QIF
 
 ```sh
-$ starling_ynab_convert <file_or_directory_path>
+$ starling_ynab_qif <file_or_directory_path>
+```
+
+Given the file `StarlingStatement_2019-03.csv`, it will generate `StarlingStatement_2019-03.ynab.qif`.
+
+### Coverting to CSV
+
+```sh
+$ starling_ynab_csv <file_or_directory_path>
 ```
 
 Given the file `StarlingStatement_2019-03.csv`, it will generate `StarlingStatement_2019-03.ynab.csv`.
+
+---
+
+## Release History
+
+* 2.0.0
+  - added QIF conversion
+  - renamed bin commands to `starling_ynab_qif` and `starling_ynab_csv`
+* 1.0.1
+  - fixed issue with CLI script
+* 1.0.0
+  - initial release featuring CSV to CSV conversion
 
 ---
 

@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+const transformer = require('../src/transforms/qif')
+require('../src/cli')(transformer)

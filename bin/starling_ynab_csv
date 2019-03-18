@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+const transformer = require('../src/transforms/csv')
+require('../src/cli')(transformer)
