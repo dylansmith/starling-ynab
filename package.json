@@ -1,6 +1,6 @@
 {
   "name": "starling-ynab",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Convert Starling Bank CSV exports for importing into YNAB",
   "main": "index.js",
   "bin": {

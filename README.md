@@ -13,9 +13,9 @@ $ npm install -g starling-ynab
 ## Usage
 
 1. Export statements via the Starling Bank app, choosing "CSV" as the output format.
-2. Choose "Export Statement" and save it somewhere accessible (e.b. Google Drive, Dropbox)
+2. Choose "Export Statement" and save it somewhere accessible (e.g. Google Drive, Dropbox)
 
-### Coverting to QIF
+### Converting to QIF
 
 ```sh
 $ starling_ynab_qif <file_or_directory_path>
@@ -23,7 +23,7 @@ $ starling_ynab_qif <file_or_directory_path>
 
 Given the file `StarlingStatement_2019-03.csv`, it will generate `StarlingStatement_2019-03.ynab.qif`.
 
-### Coverting to CSV
+### Converting to CSV
 
 ```sh
 $ starling_ynab_csv <file_or_directory_path>
@@ -35,6 +35,8 @@ Given the file `StarlingStatement_2019-03.csv`, it will generate `StarlingStatem
 
 ## Release History
 
+* 2.0.01
+  - README fixes
 * 2.0.0
   - added QIF conversion
   - renamed bin commands to `starling_ynab_qif` and `starling_ynab_csv`
