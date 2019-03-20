@@ -1,5 +1,7 @@
 # starling-ynab
 
+[![CircleCI](https://circleci.com/gh/dylansmith/starling-ynab.svg?style=svg)](https://circleci.com/gh/dylansmith/starling-ynab)
+
 A small command-line utility to convert [Starling Bank](https://www.starlingbank.com/) CSV statements into [YNAB](https://www.youneedabudget.com/)-compatible formats (CSV or QIF).
 
 Disclaimer: I personally use YNAB 4, and have not yet tested this with "New YNAB" as yet.
@@ -35,6 +37,8 @@ Given the file `StarlingStatement_2019-03.csv`, it will generate `StarlingStatem
 
 ## Release History
 
+* 2.0.3
+  - setup CI
 * 2.0.2
   - tests, refactoring and improvements
   - added keywords
