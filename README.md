@@ -35,7 +35,10 @@ Given the file `StarlingStatement_2019-03.csv`, it will generate `StarlingStatem
 
 ## Release History
 
-* 2.0.01
+* 2.0.2
+  - tests, refactoring and improvements
+  - added keywords
+* 2.0.1
   - README fixes
 * 2.0.0
   - added QIF conversion
