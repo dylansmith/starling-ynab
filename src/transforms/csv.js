@@ -11,16 +11,18 @@ function buildTargetPath (fp) {
   return path.join(dir, `${name}.ynab.csv`)
 }
 
-async function transformCsv (file) {
+async function transformInput (file) {
   const csv = await readFile(file, { encoding: 'utf-8' })
   const parsed = await parse(csv, { columns: true })
   const records = parsed.map(transformRecord)
-  const columns = records.length ? Object.keys(records[0]) : []
-  const output = await stringify(records, { columns, header: true })
+  let output
+  if (records.length) {
+    const columns = Object.keys(records[0])
+    output = await stringify(records, { columns, header: true })
+  }
   return {
     file,
     csv,
-    columns,
     records,
     output
   }
@@ -40,5 +42,5 @@ function transformRecord (input) {
 
 module.exports = {
   buildTargetPath,
-  transformCsv,
+  transformInput
 }

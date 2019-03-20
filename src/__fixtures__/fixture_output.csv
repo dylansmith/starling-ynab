@@ -1,0 +1,4 @@
+Date,Payee,Category,Memo,Outflow,Inflow
+,Opening Balance,,,,
+08/03/2019,Foo,,Bar,,10
+13/03/2019,Bax,,Qux,6.7,

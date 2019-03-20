@@ -1,0 +1,13 @@
+!Type:Bank
+POpening Balance
+^
+D08/03/2019
+T10
+PFoo
+MBar
+^
+D13/03/2019
+T-6.7
+PBax
+MQux
+^

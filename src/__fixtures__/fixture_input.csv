@@ -1,0 +1,4 @@
+Date,Counter Party,Reference,Type,Amount (GBP),Balance (GBP)
+,Opening Balance,,,,0.00
+08/03/2019,Foo,Bar,FASTER PAYMENT,10.00,10.00
+13/03/2019,Bax,Qux,GOOGLE PAY,-6.70,93.31

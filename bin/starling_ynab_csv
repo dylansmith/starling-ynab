@@ -1,4 +1,5 @@
 #!/usr/bin/env node
 
 const transformer = require('../src/transforms/csv')
-require('../src/cli')(transformer)
+const cli = require('../src/cli')
+cli.withArgs(transformer, process.argv.slice(2))
